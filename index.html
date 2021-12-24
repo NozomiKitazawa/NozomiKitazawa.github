@@ -4,47 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <div id="app">
-        <p>{{message}}</p>
-        <p v-once>{{number}}</p>
-        <p>{{ok?'yes':'no'}}</p>
-        <p>{{sayHi()}}</p>
-        <!-- <button v-on:click="reverseMessage">反転</button> -->
-        <p>現在{{number}}回クリックされています</p>
-        <button v-on:click="countUp(3)">カウント</button>
-        <p v-on:mousemove="changeMousePosition(1,$event)">マウスを載せてください</p>
-        <p>X:{{x}}、Y:{{y}}</p>
-    </div>
-    <script>
 
+    <div id="counter">
+        <div class="counter__Number">
+            <p>現在{{number}}回クリックされています</p>
+        </div>
+        <div class="counter__button">
+            <button class="bule" v-on:click="countUp(-10)">-10</button>
+            <button class="bule" v-on:click="countUp(-1)">-1</button>
+            <button class="pink" v-on:click="countUp(1)">+1</button>
+            <button class="pink" v-on:click="countUp(10)">+10</button>
+        </div>
+        <button class="reset"  v-on:click="countReset">リセット</button>
+        
+
+    </div>
+
+    <script>
         new Vue ({
 
-            el:"#app",
+            el:"#counter",
             data: {
-                message:"Hello World!",
-                number :0,
-                ok : true,
-                x:0,
-                y:0
+                number :0
             },
             methods:{
-                // reverseMessage: function(){
-                //     this.message = this.message.split('').reverse().join('')
-                // },
-                sayHi :function(){
-                    return this.message;
-                },
                 countUp:function(time){
-                    this.number += 1 *time
+                    this.number += 1 * time
                 },
-                changeMousePosition : function(dNumber,event){
-                    this.x = event.clientX/dNumber;
-                    this.y = event.clientY/dNumber;
+                countReset:function(){
+                    this.number = 0
                 }
             }
             })
