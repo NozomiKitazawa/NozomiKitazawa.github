@@ -11,25 +11,157 @@ body {
     box-sizing: border-box;
 }
 
-#counter {
-    width: 500px;
-    height: 500px;
-    border-radius: 60px;
-    background-color: #fff;
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#counter01 {
+    width: 450px;
+    height: 450px;
     margin: 0 auto;
+    position: relative;
     margin-top: 50px;
-    color: #000;
-    border: #5d5e89 solid 5px;
-    box-shadow: 5px 5px 0px 3px #5d5e89;
+    background-image: url(../img/bard-01.png);
+    background-size: cover;
+}
+
+#counter02 {
+    width: 450px;
+    height: 450px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 50px;
+    background-image: url(../img/bard-02.png);
+    background-size: cover;
+}
+
+#counter03 {
+    width: 450px;
+    height: 450px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 50px;
+    background-image: url(../img/bard-03.png);
+    background-size: cover;
+}
+
+#counter04 {
+    width: 450px;
+    height: 450px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 50px;
+    background-image: url(../img/bard-04.png);
+    background-size: cover;
+}
+
+#counter02 {
+    width: 450px;
+    height: 450px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 50px;
+    background-image: url(../img/bard-02.png);
+    background-size: cover;
+}
+
+#counter03 {
+    width: 450px;
+    height: 450px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 50px;
+    background-image: url(../img/bard-03.png);
+    background-size: cover;
+}
+
+#counter04 {
+    width: 450px;
+    height: 450px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 50px;
+    background-image: url(../img/bard-04.png);
+    background-size: cover;
+}
+
+#counter05 {
+    width: 450px;
+    height: 450px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 50px;
+    background-image: url(../img/bard-05.png);
+    background-size: cover;
+}
+
+#counter06 {
+    width: 450px;
+    height: 450px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 50px;
+    background-image: url(../img/bard-06.png);
+    background-size: cover;
+}
+
+#counter07 {
+    width: 450px;
+    height: 450px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 50px;
+    background-image: url(../img/bard-07.png);
+    background-size: cover;
+}
+
+#counter08 {
+    width: 450px;
+    height: 450px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 50px;
+    background-image: url(../img/bard-08.png);
+    background-size: cover;
+}
+
+#counter09 {
+    width: 450px;
+    height: 450px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 50px;
+    background-image: url(../img/bard-09.png);
+    background-size: cover;
+}
+
+
+.contents {
+    position: absolute;
+    width: 300px;
+    top :50%;
+    left: 75px;
+}
+
+.counter__soon {
+    font-size: 1.6rem;
+    font-weight: bold;
+    background-color: #5d5e89;
+    color: #fff;
+    padding: 30px;
+    margin: 40px auto;
+    width: 190px;
 }
 
 .counter__Number {
-    font-size: 2.5rem;
+    font-size: 1.3rem;
     font-weight: bold;
     border: #5d5e89 solid 2px;
-    margin: 60px auto;
-
-    width: 420px;
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px auto;
+    width: 230px;
 }
 
 .couter__button {
@@ -38,34 +170,34 @@ body {
 }
 
 .bule {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     color: #fff;
     background-color: cornflowerblue;
     align-items: center;
-    font-size: 4rem;
+    font-size: 2.4rem;
     border: none;
 }
 
 .pink {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     color: #fff;
     background-color: rgb(250, 98, 174);
     align-items: center;
-    font-size: 4rem;
+    font-size: 2.4rem;
     border: none;
 }
 
 .reset {
     width: 250px;
-    height: 60px;
-    margin-top: 60px;
+    height: 40px;
+    margin-top: 10px;
     background-color: #5d5e89;
     color: #fff;
-    font-size: 2.7rem;
+    font-size: 2rem;
     font-weight: bold;
     border: none;
     border-radius: 30px;
