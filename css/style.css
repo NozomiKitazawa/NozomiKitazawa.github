@@ -157,13 +157,19 @@ body {
 /*ーーーー カウンター ーーーー*/
 
 .counter__Number {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     font-weight: bold;
     border: #5d5e89 solid 2px;
     background-color: #fff;
     padding: 10px;
     margin: 10px auto;
     width: 230px;
+}
+
+.counter__num {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: rgb(187, 3, 3);
 }
 
 .couter__button {
@@ -211,7 +217,8 @@ body {
 .counter__stopWatch {
     font-weight: bold;
     background-color: #5d5e89;
-    color: #000;
+    border-radius: 20px;
+    color: #fff;
     padding: 25px;
     margin: 20px auto;
     width: 230px;
@@ -219,7 +226,6 @@ body {
 
 .counter__stopWatch--title {
     font-size: 2rem;
-    color: #fff;
 }
 
 .counter__stopWatch--Number {
@@ -228,12 +234,12 @@ body {
     padding: 10px;
     margin: 10px auto;
     width: 90%;
+    color: #5d5e89;
 }
 
 .counter__stopWatch--lap {
     font-size: 1.6rem;
     font-weight: normal;
-    color: #fff;
     margin-top: 10px;
 }
 
