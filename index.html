@@ -9,7 +9,6 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 <div class="wrapper">
     <div id="counter01">
         <div class="contents">
@@ -28,8 +27,29 @@
 
     <div id="counter02">
         <div class="contents">
-            <div class="counter__soon">
-                <p>comming soon</p>
+            <div class="counter__stopWatch">
+                <p class="counter__stopWatch--title">ストップウォッチ</p>
+                <p class="counter__stopWatch--Number">
+                    {{ hours }} :
+                    {{ minutes | zeroPad }} :
+                    {{ seconds | zeroPad }} :
+                    {{ milliSeconds | zeroPad(3)}}
+                </p>
+
+                <div class="counter__button">
+                    <button class="ui secondary button" @click="startTimer" :disabled="isRunning">START</button>
+                    <button class="ui button" @click="pushTime" :disabled="!isRunning">LAP</button>
+                    <button class="ui button" @click="stopTimer" :disabled="!isRunning">STOP</button>
+                    <button class="ui basic button" @click="clearAll">CLEAR</button>
+                </div>
+                <ul class="counter__stopWatch--lap" v-if="times.length">
+                    <li class="counter__stopWatch--item" v-for="item in times">
+                    {{ item.hours  }} :
+                    {{ item.minutes | zeroPad }} :
+                    {{ item.seconds | zeroPad }} :
+                    {{ item.milliSeconds | zeroPad(3) }}
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -91,23 +111,7 @@
     </div>
 
 </div>
-
-    <script>
-        new Vue ({
-
-            el:"#counter01",
-            data: {
-                number :0
-            },
-            methods:{
-                countUp:function(time){
-                    this.number += 1 * time
-                },
-                countReset:function(){
-                    this.number = 0
-                }
-            }
-            })
-    </script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
