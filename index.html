@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="wrapper">
-    <div id="counter01">
+    <div id="content01">
         <div class="contents">
             <div class="counter__Number">
                 <p>カウンター : 現在<span class="counter__num"> {{number}}</span> 回</p>
@@ -25,7 +25,7 @@
         </div>
     </div>
 
-    <div id="counter02">
+    <div id="content02">
         <div class="contents">
             <div class="counter__stopWatch">
                 <p class="counter__stopWatch--title">ストップウォッチ</p>
@@ -54,7 +54,66 @@
         </div>
     </div>
 
-    <div id="counter03">
+    <div id="content03">
+        <div class="contents">
+            <div class="counter__digitalClock">
+                <p class="counter__digitalClock--title">デジタル時計</p>
+                <div class="counter__digitalClock--Number">
+                    <p class="counter__digitalClock--date">{{date}}</p>
+                    <p class="counter__digitalClock--time">{{time}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="content04">
+        <div class="contents">
+            <div class="counter__soon">
+                <p>カラーコード予定</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="content05">
+        <div class="contents">
+            <div class="counter__soon">
+                <p>電卓の予定</p>
+                <table>
+                    <tr>
+                        <td colspan="3">
+                            <input type="text" id="output" value="0" v-model="result">
+                        </td>
+                        <td>
+                            <button value="c" @click="calculate('c')">C</button>
+                        </td>
+                    </tr>
+                    <tr v-for="row in items">
+                        <td v-for="column in row">
+                            <button v-on:click="calculate(column)">{{column}}</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="content06">
+        <div class="contents">
+            <div class="counter__soon">
+                <p>モーダルウィンドウ</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="content07">
+        <div class="contents">
+            <div class="counter__soon">
+                <p>住所自動入力</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="content08">
         <div class="contents">
             <div class="counter__soon">
                 <p>comming soon</p>
@@ -62,47 +121,7 @@
         </div>
     </div>
 
-    <div id="counter04">
-        <div class="contents">
-            <div class="counter__soon">
-                <p>comming soon</p>
-            </div>
-        </div>
-    </div>
-
-    <div id="counter05">
-        <div class="contents">
-            <div class="counter__soon">
-                <p>comming soon</p>
-            </div>
-        </div>
-    </div>
-
-    <div id="counter06">
-        <div class="contents">
-            <div class="counter__soon">
-                <p>comming soon</p>
-            </div>
-        </div>
-    </div>
-
-    <div id="counter07">
-        <div class="contents">
-            <div class="counter__soon">
-                <p>comming soon</p>
-            </div>
-        </div>
-    </div>
-
-    <div id="counter08">
-        <div class="contents">
-            <div class="counter__soon">
-                <p>comming soon</p>
-            </div>
-        </div>
-    </div>
-
-    <div id="counter09">
+    <div id="content09">
         <div class="contents">
             <div class="counter__soon">
                 <p>comming soon</p>

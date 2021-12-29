@@ -1,6 +1,8 @@
+
+//ーーカウンターーー
 new Vue({
 
-    el:"#counter01",
+    el:"#content01",
     data: {
         number :0
     },
@@ -14,15 +16,16 @@ new Vue({
     }
 });
 
+//ーーストップウォッチーー
 new Vue({
-    el: "#counter02",
+    el: "#content02",
     data: {
         times: [],
         animateFrame: 0,
         nowTime: 0,
         diffTime: 0,
         startTime: 0,
-        isRunning: false
+        isRunning: false        
     },
     methods: {
         // 現在時刻から引数に渡した数値を startTime に代入
@@ -91,6 +94,107 @@ new Vue({
         zeroPad: function(value, num){
             var num = typeof num !== 'undefined' ? num : 2;
             return value.toString().padStart(num,"0");
+        }
+    }
+});
+
+
+//ーーデジタル時計ーー
+new Vue({
+    el:"#content03",
+    data: {
+        date: '',
+        time: '',
+        week: [' Sun',' Mon', ' Tue', ' Wed', ' Thu',  ' Fri', ' Sta'] 
+        },
+    mounted: function()  {
+        let timerID = setInterval(this.updateTime, 1000); 
+        }, 
+    methods: { 
+        updateTime: function() { 
+            //現在の日付・時刻を取得 
+            let currentdate = new Date()
+        
+            // 現在の時刻
+            this.time = this.zeroPadding(currentdate.getHours(), 2) + ':' + this.zeroPadding(currentdate.getMinutes(), 2) + ':' + this.zeroPadding(currentdate.getSeconds(), 2)
+        
+            // 現在の年月日
+            this.date = this.zeroPadding(currentdate.getFullYear(), 4) + '年' + this.zeroPadding(currentdate.getMonth() + 1, 2) + '月' + this.zeroPadding(currentdate.getDate(), 2) + '日' + this.week[currentdate.getDay()]
+            },
+            zeroPadding: function(num, len) {
+            let zero = '';
+        
+            // 0の文字列を作成
+            for(var i = 0; i < len; i++) {
+                zero += '0';
+            }
+        
+            // zeroの文字列と、数字を結合し、後ろ２文字を返す
+            return (zero + num).slice(-len);
+            }
+        }
+});
+
+//ーーカラーコードーー
+new Vue({
+
+    el:"#content01",
+    data: {
+        number :0
+    },
+    methods:{
+        countUp:function(time){
+            this.number += 1 * time
+        },
+        countReset:function(){
+            this.number = 0
+        }
+    }
+});
+
+
+//ーー電卓ーー
+new Vue({
+
+    el:"#content05",
+    data: {
+        result:'0',
+        items:[
+            ['7','8','9','/'],
+            ['4','5','6','*'],
+            ['1','2','3','-'],
+            ['0','.','+','='],
+        ]
+    },
+    methods: {
+        calculate:function(cmd){
+            if(cmd == '='){
+                this.result = eval(this.result);
+            }else if(cmd == 'c'){
+                this.result = '0';
+            }else if(this.result == '0'){
+                this.result = cmd;
+            }else{
+                this.result += cmd;
+            }
+        }  
+    },
+});
+
+
+//ーーカウンターーー
+new Vue({
+
+    el:"#content01",
+    data: {
+        number :0
+    },
+    methods:{
+        countUp:function(time){
+            this.number += 1 * time
+        },
+        countReset:function(){
+            this.number = 0
         }
     }
 });
