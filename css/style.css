@@ -327,10 +327,11 @@ body {
 
 .calculator-tr input {
     font-size: 2rem;
-    width: 125px;
+    width: 120px;
     height: 32px;
     border: none;
     border-radius: 10px;
+    padding-left: 10px;
     margin-left: 5px;
     margin-bottom: 1px;
 }
