@@ -22,7 +22,7 @@ body {
     height: 430px;
     margin: 0 auto;
     position: relative;
-    margin-top: 50px;
+    margin-top: 80px;
     background-image: url(../img/bard-01.png);
     background-size: cover;
 }
@@ -32,7 +32,7 @@ body {
     height: 430px;
     margin: 0 auto;
     position: relative;
-    margin-top: 50px;
+    margin-top: 80px;
     background-image: url(../img/bard-02.png);
     background-size: cover;
 }
@@ -42,7 +42,7 @@ body {
     height: 430px;
     margin: 0 auto;
     position: relative;
-    margin-top: 50px;
+    margin-top: 80px;
     background-image: url(../img/bard-03.png);
     background-size: cover;
 }
@@ -52,7 +52,7 @@ body {
     height: 430px;
     margin: 0 auto;
     position: relative;
-    margin-top: 50px;
+    margin-top: 80px;
     background-image: url(../img/bard-04.png);
     background-size: cover;
 }
@@ -62,7 +62,7 @@ body {
     height: 430px;
     margin: 0 auto;
     position: relative;
-    margin-top: 50px;
+    margin-top: 80px;
     background-image: url(../img/bard-05.png);
     background-size: cover;
 }
@@ -72,7 +72,7 @@ body {
     height: 430px;
     margin: 0 auto;
     position: relative;
-    margin-top: 50px;
+    margin-top: 80px;
     background-image: url(../img/bard-06.png);
     background-size: cover;
 }
@@ -82,7 +82,7 @@ body {
     height: 430px;
     margin: 0 auto;
     position: relative;
-    margin-top: 50px;
+    margin-top: 80px;
     background-image: url(../img/bard-07.png);
     background-size: cover;
 }
@@ -92,7 +92,7 @@ body {
     height: 430px;
     margin: 0 auto;
     position: relative;
-    margin-top: 50px;
+    margin-top: 80px;
     background-image: url(../img/bard-08.png);
     background-size: cover;
 }
@@ -102,7 +102,7 @@ body {
     height: 430px;
     margin: 0 auto;
     position: relative;
-    margin-top: 50px;
+    margin-top: 80px;
     background-image: url(../img/bard-09.png);
     background-size: cover;
 }
@@ -247,6 +247,112 @@ body {
 
 .counter__digitalClock--time {
     font-size: 3.5rem;
+}
+
+
+/*ーーーー カラーコード ーーーー*/
+
+.color-form {
+    font-weight: bold;
+    background-color: #fff;
+    border: solid 4px #5d5e89;
+    border-radius: 20px;
+    color: #5d5e89;
+    padding:15px 25px;
+    margin: 20px auto;
+    width: 230px;
+}
+
+.color-form__item {
+    margin-top: 5px;
+    width: 100%;
+    color: #fff;
+}
+
+.color-form__item span {
+    font-size: 1.6rem;
+    padding: 3px 5px;
+}
+.color__item {
+    width: 180px;
+    margin: 10px auto;
+    padding: 8px 0;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.color__stock {
+    padding: 5px 20px;
+    font-size: 1.4rem;
+    border-radius: 20px;
+    background-color: #5d5e89;
+    color: #fff;
+}
+
+.color-list {
+    margin-top: 13px;
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+.color-list__code {
+    width: 180px;
+    border-radius: 30px;
+    padding: 5px 0;
+    margin: 0 auto;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+
+/*ーーーー 電卓 ーーーー*/
+
+.calculator-form {
+    font-weight: bold;
+    background-color: #5d5e89;
+    border-radius: 20px;
+    color: #fff;
+    padding: 20px 25px;
+    width: 230px;
+    margin: 20px auto;
+}
+
+.calculator-table {
+    margin: 10px auto ;
+}
+
+.calculator-tr {
+    height: 30px;
+}
+
+.calculator-tr input {
+    font-size: 2rem;
+    width: 125px;
+    height: 32px;
+    border: none;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-bottom: 1px;
+}
+
+.calculator-button01 {
+    background-color: rgb(255, 232, 100);
+    font-size: 2rem;
+    width: 40px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+.calculator-button02 {
+    background-color: #fff;
+    font-size: 2rem;
+    width: 40px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-left: 5px;
 }
 
 

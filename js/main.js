@@ -136,21 +136,22 @@ new Vue({
 });
 
 //ーーカラーコードーー
-new Vue({
-
-    el:"#content01",
+new Vue( {
+    el: "#content04",
     data: {
-        number :0
+        r: 0,
+        g: 0,
+        b: 0,
+        colors: [],
+        active: false
     },
-    methods:{
-        countUp:function(time){
-            this.number += 1 * time
+    methods: {
+        stockColor: function(){
+            this.active = true;
+            this.colors.unshift( 'rgb('+this.r+', '+this.g+', '+this.b+')' );
         },
-        countReset:function(){
-            this.number = 0
-        }
     }
-});
+})
 
 
 //ーー電卓ーー
@@ -182,19 +183,19 @@ new Vue({
 });
 
 
-//ーーカウンターーー
-new Vue({
+// //ーーカウンターーー
+// new Vue({
 
-    el:"#content01",
-    data: {
-        number :0
-    },
-    methods:{
-        countUp:function(time){
-            this.number += 1 * time
-        },
-        countReset:function(){
-            this.number = 0
-        }
-    }
-});
+//     el:"#content01",
+//     data: {
+//         number :0
+//     },
+//     methods:{
+//         countUp:function(time){
+//             this.number += 1 * time
+//         },
+//         countReset:function(){
+//             this.number = 0
+//         }
+//     }
+// });

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/ress.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>Vueでのミニアプリ集</title>
 </head>
 <body>
 <div class="wrapper">
@@ -68,28 +68,52 @@
 
     <div id="content04">
         <div class="contents">
-            <div class="counter__soon">
-                <p>カラーコード予定</p>
+            <div class="color-form">
+                <p>カラーコード</p>
+                <div class="color-form__item">
+                    <input type="range" name="r" id="r" max="255" v-model="r">
+                    <span v-bind:style="{background: 'rgb('+r+', 0, 0)'}">R</span>
+                </div>
+                <div class="color-form__item">
+                    <input type="range" name="g" id="g" max="255" v-model="g">
+                    <span v-bind:style="{background: 'rgb(0, '+g+', 0)'}">G</span>
+                </div>
+                <div class="color-form__item">
+                    <input type="range" name="b" id="b" max="255" v-model="b">
+                    <span v-bind:style="{background: 'rgb(0, 0, '+b+')'}">B</span>
+                </div>
+                <div class="color__item" v-bind:style="{background: 'rgb('+r+', '+g+', '+b+')'}">rgb({{r}}, {{g}}, {{b}})</div>
+                <a href="javascript:void(0);" class="color__stock" v-on:click="stockColor">
+                    ストックする
+                </a>
+
+                <div class="l-side">
+                    <ul class="color-list">
+                        <li class="color-list__item" v-for="( color, index ) in colors">
+                            <p class="color-list__code" v-bind:style="{background: color}">{{ color }}</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 
     <div id="content05">
         <div class="contents">
-            <div class="counter__soon">
-                <p>電卓の予定</p>
-                <table>
-                    <tr>
+            <div class="calculator-form">
+                <p>簡易電卓</p>
+                <table class="calculator-table">
+                    <tr class="calculator-tr">
                         <td colspan="3">
                             <input type="text" id="output" value="0" v-model="result">
                         </td>
                         <td>
-                            <button value="c" @click="calculate('c')">C</button>
+                            <button value="c" @click="calculate('c')" class="calculator-button01">C</button>
                         </td>
                     </tr>
                     <tr v-for="row in items">
                         <td v-for="column in row">
-                            <button v-on:click="calculate(column)">{{column}}</button>
+                            <button v-on:click="calculate(column)" class="calculator-button02">{{column}}</button>
                         </td>
                     </tr>
                 </table>
